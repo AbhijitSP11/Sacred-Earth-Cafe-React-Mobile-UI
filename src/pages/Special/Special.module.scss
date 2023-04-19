@@ -1,0 +1,61 @@
+.container{
+    height: 560px; 
+    overflow-y: auto;
+    ::-webkit-scrollbar {
+        width: 0.5em;
+        background-color: #f6f6f6; /* Set the same background color as the container */
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #d6d6d6; /* Set the color of the scrollbar thumb */
+      }
+    
+      /* Hide the scrollbar for other browsers */
+      scrollbar-width: thin;
+      scrollbar-color: #d6d6d6 #f6f6f6;
+    
+      /* Additional property to hide the scrollbar */
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        width: 0; /* Chrome, Safari, and Opera */
+      }
+
+.header{
+        position: relative;
+        top: 0; /* Y: 0px */
+        left: 0; /* X: 0px */
+        width: 328px; /* Width: 328px */
+        height: 130px; /* Height: 130px */
+        background-color: #F1F1F1; /* Fill Color Style: Grayscale/Background */
+        border-radius: 10px; /* Corner radius: 10px */
+        box-shadow: 
+          5px 5px 13px rgba(217, 217, 217, 0.9), /* Drop shadow 1 */
+          -5px -5px 10px rgba(255, 255, 255, 0.9), /* Drop shadow 2 */
+          5px -5px 10px rgba(217, 217, 217, 0.2), /* Drop shadow 3 */
+          -5px 5px 10px rgba(217, 217, 217, 0.2); /* Drop shadow 4 */
+        left: 0; /* X constraint: Left */
+        top: 0; /* Y constraint: Top */
+        
+        img{
+            width: 320px; 
+            height: 122px; 
+            padding: 4px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+    .head{
+        margin-top: 22px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        hr{
+            width: 200px;
+        }
+    }
+    .specialGrid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

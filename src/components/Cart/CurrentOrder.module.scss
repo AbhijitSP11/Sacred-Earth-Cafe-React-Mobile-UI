@@ -1,0 +1,68 @@
+.details{
+    margin-bottom: 16px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .priceAndImg{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        img{
+            width: 16px;
+            height: 16px;
+        }
+
+        .price{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-left: 16px;
+        }
+    }
+   
+    .addBtn{
+        display: flex;
+        padding: 0px 2px;
+        width: 90px;
+        height: 32px;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #F0F0F3;
+        box-shadow:
+          5px 5px 13px rgba(221, 221, 224, 0.9),
+          -5px -5px 10px rgba(255, 255, 255, 0.9),
+          5px -5px 10px rgba(221, 221, 224, 0.2),
+          -5px 5px 10px rgba(221, 221, 224, 0.2);
+        .plus{
+            padding: 2px;
+            width: 24px;
+            height: 24px;
+            align-items: center;
+            justify-content: center;
+            transform-origin: center;
+            transform: scale(1);
+            border-radius: 50%; /* Set border-radius to 50% for a circle */
+            background-color: #F1F1F1;
+            box-shadow:
+                2px 2px 5px rgba(222, 222, 222, 0.9) inset,
+                -2px -2px 4px rgba(255, 255, 255, 0.9) inset,
+                2px -2px 4px rgba(222, 222, 222, 0.2) inset,
+                -2px 2px 4px rgba(222, 222, 222, 0.2) inset;
+    
+                img{
+                    width: 10px;height: 10px;
+                }
+        }
+        .add{
+            padding-right: 4px;
+            align-items: center;
+    
+        }
+    
+    }
+  }

@@ -1,0 +1,85 @@
+.container{
+    display: flex;
+    padding: 8px;
+    margin-top: 22px;
+    width: 328px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #F6F6F6;
+    box-shadow:
+      2px 2px 5px rgba(220, 220, 220, 0.9) inset,
+      -2px -2px 4px rgba(255, 255, 255, 0.9) inset,
+      2px -2px 4px rgba(220, 220, 220, 0.2) inset,
+      -2px 2px 4px rgba(220, 220, 220, 0.2) inset;
+    img{
+        width: 71px;
+        height: 71px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .right{
+        padding: 0px 8px;
+        .heading{
+
+        }
+        .down{
+            margin-top: 16px;
+            display: flex;
+            gap: 7.5rem;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width: 16px;
+                height: 16px;
+                object-fit: contain;
+            }
+            .veg{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .addBtn{
+                display: flex;
+                padding: 0px 2px;
+                width: 72px;
+                height: 32px;
+                border-radius: 10px;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #F0F0F3;
+                box-shadow:
+                  5px 5px 13px rgba(221, 221, 224, 0.9),
+                  -5px -5px 10px rgba(255, 255, 255, 0.9),
+                  5px -5px 10px rgba(221, 221, 224, 0.2),
+                  -5px 5px 10px rgba(221, 221, 224, 0.2);
+                .plus{
+                    padding: 2px;
+                    width: 24px;
+                    height: 24px;
+                    align-items: center;
+                    justify-content: center;
+                    transform-origin: center;
+                    transform: scale(1);
+                    border-radius: 50%; /* Set border-radius to 50% for a circle */
+                    background-color: #F1F1F1;
+                    box-shadow:
+                        2px 2px 5px rgba(222, 222, 222, 0.9) inset,
+                        -2px -2px 4px rgba(255, 255, 255, 0.9) inset,
+                        2px -2px 4px rgba(222, 222, 222, 0.2) inset,
+                        -2px 2px 4px rgba(222, 222, 222, 0.2) inset;
+            
+                        img{
+                            width: 10px;height: 10px;
+                        }
+                }
+                .add{
+                    padding-right: 4px;
+                    align-items: center;
+            
+                }
+            
+            }
+        }
+    }
+    
+}
