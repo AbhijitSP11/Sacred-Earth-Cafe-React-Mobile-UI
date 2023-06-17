@@ -3,14 +3,18 @@ import styles from './CurrentOrder.module.scss'
 import veg from '../../assets/vegIcon.png'
 import plusIcon from '../../assets/plus.png'
 
-const CurrentOrder = () => {
+
+
+const CurrentOrder = ({title, price}) => {
+   
+    
   return (
     <div className={styles.details}>
     <div className={styles.priceAndImg}>
         <img src={veg} alt="" />
         <div className={styles.price}>
-        Sunrise 
-            <div>200</div>
+        {title}
+            <div>{price}</div>
         </div>
     </div>
 

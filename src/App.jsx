@@ -7,19 +7,13 @@ import { useState } from 'react';
 
 
 function App() {
-  const [cartItems, setCartItems] = useState(0); // State to keep track of cart items count
 
-  const handleAddToCart = () => {
-    setCartItems(cartItems + 1); // Increment cart items count when add button is clicked
-  };
-
-  
   const [showTopNavbar, setShowTopNavbar] = useState(true);
   const handleMenuClick = (menu) => {
-    // Update state to hide top navbar
+    
     setShowTopNavbar(false);
-    // Update URL to match the clicked menu
     window.history.pushState(null, '', `/${menu}`);
+    
   };
   return (
     <div className="App">
@@ -37,7 +31,7 @@ function App() {
                           />
                       ))}
                   </Routes>
-                  <BottomNavbar handleMenuClick={handleMenuClick} itemCount={cartItems}/> 
+                  <BottomNavbar handleMenuClick={handleMenuClick} /> 
             </BrowserRouter>
                         
       </div>

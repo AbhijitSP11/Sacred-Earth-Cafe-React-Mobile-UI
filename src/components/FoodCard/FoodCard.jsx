@@ -2,15 +2,16 @@ import React from 'react'
 import styles from './FoodCard.module.scss'
 import veg from '../../assets/vegIcon.png'
 import plusIcon from '../../assets/plus.png'
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../store/cartSlice"; 
+import { useDispatch, useSelector } from "react-redux";
+import { addItem } from '../../store/cartSlice';
 
 const FoodCard = ({title, price, image, id, }) => {
+  const dispatch = useDispatch();
+  const cartCount = useSelector((state) => state.cart.count);
 
-    const dispatch = useDispatch();
-    const handleClick = () => {
-      dispatch(addToCart()); // Dispatch addToCart action when add button is clicked
-    };  
+  const handleAddToCart = () => {
+    dispatch(addItem({ id }));
+  };
   
   return (
     <div className={styles.container}>
@@ -21,13 +22,16 @@ const FoodCard = ({title, price, image, id, }) => {
         </div>
         <div className={styles.down}>
             <div>{price}</div>
-            <div className={styles.addBtn}>
-                <div className={styles.plus} onClick={handleClick}>
-                <span>
-                    <img src={plusIcon} alt="" />
-                </span></div>
-                <div className={styles.add}>ADD</div>
-            </div>
+            <div className={styles.addBtn} onClick={handleAddToCart}>
+        <div className={styles.plus}>
+          <span>
+            <img src={plusIcon} alt="" />
+          </span>
+        </div>
+        <div className={styles.add}>ADD</div>
+      </div>
+
+     
         </div>
     </div>
   )

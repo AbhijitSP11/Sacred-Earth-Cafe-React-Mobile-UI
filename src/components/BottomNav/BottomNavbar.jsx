@@ -9,8 +9,8 @@ import { useSelector } from "react-redux";
 const BottomNavbar = ({ handleMenuClick }) => {
   const [activeMenu, setActiveMenu] = useState(window.location.pathname); // State to track active menu
   const navigate = useNavigate(); 
+  const cartCount = useSelector((state) => state.cart.count);
   
-  const itemCount = useSelector((state) => state.cart.itemCount)
   
 
   // Function to handle menu item clicks
@@ -34,12 +34,12 @@ const BottomNavbar = ({ handleMenuClick }) => {
           <img src={Book} alt="" />
         </div>
       </div>
-      <div className={styles.navbarIcon}  onClick={() => handleClick('place-order')} >
+      <div className={styles.navbarIcon} onClick={() => handleClick("place-order")}>
         <div className={styles.box}>
           <img src={Shopping} alt="" />
-          {itemCount > 0 && ( // Display item count only if it's greater than 0
-        <span className="item-count">{itemCount}</span>
-      )}
+          {cartCount > 0 && (
+            <div className={styles.cartCount}>{cartCount}</div>
+          )}
         </div>
       </div>
 

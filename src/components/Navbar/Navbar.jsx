@@ -24,7 +24,7 @@ const Navbar = () => {
      <div className={styles.head}>
         <div className={styles.left}>
             <img src={logo} alt="logo" />
-            <span className={styles.heading}>Sacred Earth Cafe</span>
+            <span className={styles.heading}>Sacred Cafe</span>
         </div>
 
         <div className={styles.right}>

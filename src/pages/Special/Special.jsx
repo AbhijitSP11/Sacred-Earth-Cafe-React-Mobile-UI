@@ -7,7 +7,6 @@ import { SpecialData } from '../../json/SpecialData'
 
 const Special = () => {
 
-  
   return (
     <div className={styles.container}>
     <div className={styles.header}>
